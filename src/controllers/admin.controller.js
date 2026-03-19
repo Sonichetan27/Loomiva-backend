@@ -23,8 +23,10 @@ export const registerAdmin = async (req, res) => {
       });
     }
 
+    // Check if admin already exists
     const existingAdmin = await Admin.findOne({ email });
 
+    // If admin exists, return error
     if (existingAdmin) {
       return res.status(400).json({
         success: false,
@@ -32,6 +34,7 @@ export const registerAdmin = async (req, res) => {
       });
     }
 
+    // Create new admin
     const admin = await Admin.create({
       name,
       email,
