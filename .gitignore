@@ -78,10 +78,37 @@ web_modules/
 
 # dotenv environment variable files
 .env
+.env.development
+.env.production
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+
+# Sensitive configuration files
+config.js
+config.json
+credentials.json
+secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.mongodb
+
+# Temporary upload directories
+public/temp/*
+!public/temp/.gitkeep
+
+# Cloudinary and service credentials
+cloudinary_config.js
+service_keys.js
+api_keys.js
 
 # Serverless directories
 .serverless/

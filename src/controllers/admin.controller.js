@@ -1,14 +1,5 @@
 import Admin from "../models/admin.model.js";
-import jwt from "jsonwebtoken";
-
-// Generate JWT
-const generateToken = (adminId) => {
-  return jwt.sign(
-    { id: adminId },
-    process.env.JWT_SECRET,
-    { expiresIn: "7d" }
-  );
-};
+import { generateToken } from "../utils/generateToken.js";
 
 
 // Register Admin
