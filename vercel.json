@@ -12,6 +12,11 @@
       "dest": "src/server.js"
     }
   ],
+  "env": {
+    "NODE_OPTIONS": "--experimental-json-modules",
+    "FRONTEND_URL": "https://loomive-frontend.vercel.app",
+    "BACKEND_URL": "https://loomiva-backend.vercel.app"
+  },
   "functions": {
     "src/server.js": {
       "maxDuration": 20
